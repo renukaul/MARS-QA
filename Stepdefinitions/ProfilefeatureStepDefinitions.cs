@@ -40,15 +40,15 @@ namespace MARS_QA.StepDefinitions
         [When(@"\[I want to add Education details]")]
         public void WhenIWantToAddEducationDetails()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
-            ProfilePageObj.AddEducation(driver);
+           // ProfilePage ProfilePageObj = new ProfilePage();
+           // ProfilePageObj.AddEducation(driver);
         }
 
         [When(@"\[I want to add Certification details]")]
         public void WhenIWantToAddCertificationDetails()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
-            ProfilePageObj.AddCertification(driver);
+           // ProfilePage ProfilePageObj = new ProfilePage();
+           // ProfilePageObj.AddCertification(driver);
         }
 
         [Then(@"\[The records should be created successfully]")]

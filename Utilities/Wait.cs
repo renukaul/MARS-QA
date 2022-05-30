@@ -61,7 +61,7 @@ namespace MARS_QA.Utilities
             {
             }
 
-            internal static void WaitForvisible(IWebDriver mydriver, string v1, string v2)
+            internal static void Waitforclicable(IWebDriver mydriver, string v1, string v2)
             {
 
             }
