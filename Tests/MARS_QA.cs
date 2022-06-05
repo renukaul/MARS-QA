@@ -15,28 +15,28 @@ namespace MARS_QA
         public void AddLanguage()
         {
             //Profile page object initializing and defining
-            ProfilePage ProfilePageObj = new ProfilePage();
-            ProfilePageObj.AddLanguage(driver);
+            LanguageTab LanguageTabObj = new LanguageTab();
+            LanguageTabObj.AddLanguage(driver);
         }
 
         [Test]
         public void AddSkills()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
-            ProfilePageObj.AddSkills(driver);
+            SkillTab SkillTabObj = new SkillTab();
+            SkillTabObj.AddSkills(driver);
         }
         
         [Test]
         public void AddEducation()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
-            ProfilePageObj.AddEducation(driver);
+            EducationTab EducationTabObj = new EducationTab();
+            EducationTabObj.AddEducation(driver);
         }
         [Test]
         public void AddCertification()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
-            ProfilePageObj.AddCertification(driver);
+         //   CertificationTab CertificationTabObj = new CertificationTab();
+         //   CertificationTabObj.AddCertification(driver);
         }
 
         

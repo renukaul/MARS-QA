@@ -32,26 +32,7 @@ namespace MARS_QA.Pages
             //Identify the login button and click 
             IWebElement loginButton = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
             loginButton.Click();
-            Thread.Sleep(1000);
-
-            //Check if user is logged in successfully
-
-            //IWebElement hiIndika = driver.FindElement(By.CssSelector(".item ui dropdown link"));
-           // IWebElement hiIndika = driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/div[1]/div[2]/div/span"));
-//            Thread.Sleep(500);
-
-  //          if (hiIndika.Text == "Hi Indika")
-    //        {
-      //          Console.WriteLine("Logged in successfull. Test passed");
-
-        //    }
-          //  else
-            //{
-              //  Console.WriteLine("Login Failed. Test failed");
-
-            //}
-
-
+                       
         }
     }
 }

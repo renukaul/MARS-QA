@@ -31,8 +31,8 @@ namespace MARS_QA.StepDefinitions
         public void WhenIWantToAddLanguageDetails()
         {
            // Profile page object initializing and defining
-            ProfilePage ProfilePageObj = new ProfilePage();
-            ProfilePageObj.AddLanguage(driver);
+            LanguageTab LanguageTabObj = new LanguageTab();
+            LanguageTabObj.AddLanguage(driver);
         }
 
         
@@ -40,12 +40,11 @@ namespace MARS_QA.StepDefinitions
         [Then(@"\[The records should be created successfully]")]
         public void ThenTheRecordsShouldBeCreatedSuccessfully()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
+            LanguageTab LanguageTabObj = new LanguageTab();
 
-            string newLanguage = ProfilePageObj.GetLanguage(driver);
+            string newLanguage = LanguageTabObj.GetLanguage(driver);
             Assert.That(newLanguage == "French", "Actual Language and Expected language does not match");
-
-                       
+                                   
         }
 
 
@@ -68,15 +67,16 @@ namespace MARS_QA.StepDefinitions
         [When(@"\[I want to add Skillls details]")]
         public void WhenIWantToAddSkilllsDetails()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
-            ProfilePageObj.AddSkills(driver);
+            SkillTab SkillTabObj = new SkillTab();
+            SkillTabObj.AddSkills(driver);
         }
 
         [Then(@"\[The skills records should be created successfully]")]
         public void ThenTheSkillsRecordsShouldBeCreatedSuccessfully()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
-            string newSkill = ProfilePageObj.GetSkills(driver);
+            SkillTab SkillTabObj = new SkillTab();
+            
+            string newSkill = SkillTabObj.GetSkills(driver);
             Assert.That(newSkill == "Painting", "Actual Skill and Expected Skill does not match");
         }
 
@@ -100,15 +100,16 @@ namespace MARS_QA.StepDefinitions
         [When(@"\[I want to add the Education details]")]
         public void WhenIWantToAddTheEducationDetails()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
-            ProfilePageObj.AddEducation(driver);
+            EducationTab EducationTabObj = new EducationTab();
+            EducationTabObj.AddEducation(driver);
         }
 
         [Then(@"\[The education records should be created successfully]")]
         public void ThenTheEducationRecordsShouldBeCreatedSuccessfully()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
-            string newEducation = ProfilePageObj.GetEducation(driver);
+            EducationTab EducationTabObj = new EducationTab();
+            
+            string newEducation = EducationTabObj.GetEducation(driver);
             Assert.That(newEducation == "AUT", "Actual Education and Expected Education does not match");
         }
 
@@ -133,15 +134,18 @@ namespace MARS_QA.StepDefinitions
         [When(@"\[I want to add the Certification details]")]
         public void WhenIWantToAddTheCertificationDetails()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
-            ProfilePageObj.AddCertification(driver);
+            CertificationTab CertificationTabObj = new CertificationTab(); 
+            CertificationTabObj.CertificationTabM(driver);
+            CertificationTabObj.AddNewCertification(driver);
+
         }
 
         [Then(@"\[The Certification records should be created successfully]")]
         public void ThenTheCertificationRecordsShouldBeCreatedSuccessfully()
         {
-            ProfilePage ProfilePageObj = new ProfilePage();
-            string newCertification = ProfilePageObj.GetCertification(driver);
+            CertificationTab CertificationTabObj = new CertificationTab();
+            
+            string newCertification = CertificationTabObj.GetCertification(driver);
             Assert.That(newCertification == "Diploma", "Actual Certificate and Expected Certificate does not match");
         }
 
