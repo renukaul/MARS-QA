@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using MARS_QA.Utilities;
+using OpenQA.Selenium;
+using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,52 +10,27 @@ using System.Threading.Tasks;
 
 namespace MARS_QA.Pages
 {
-    internal class Loginpage
+    public class Loginpage
     {
-        public void LoginSteps(IWebDriver driver)
+        
+        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/div/div[1]/div/div[1]/input")]
+        public IWebElement emailAddress { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/div/div[1]/div/div[2]/input")]
+        public IWebElement passWord { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/div/div[1]/div/div[4]/button")]
+        public IWebElement loginButton { get; set; }
+               
+        public void Loginsteps()
         {
-            //Open Mars web page
-            driver.Navigate().GoToUrl("http://localhost:5000/");
-
-
-            //Identify the sign in button and click it
-            IWebElement signInButton = driver.FindElement(By.XPath("//*[@id='home']/div/div/div[1]/div/a"));
-            signInButton.Click();
-
-            //Identify the email address text box and enter valid email address
-            IWebElement emailAddress = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[1]/input"));
             emailAddress.SendKeys("roshanfer80@gmail.com");
-
-
-            //Identify the Password text box and enter valid Password
-            IWebElement passWord = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[2]/input"));
             passWord.SendKeys("Producetaka1");
-
-            //Identify the login button and click 
-            IWebElement loginButton = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
             loginButton.Click();
-            Thread.Sleep(1000);
-
-            //Check if user is logged in successfully
-
-            //IWebElement hiIndika = driver.FindElement(By.CssSelector(".item ui dropdown link"));
-           // IWebElement hiIndika = driver.FindElement(By.XPath("//*[@id='account - profile - section']/div/div[1]/div[2]/div/span"));
-//            Thread.Sleep(500);
-
-  //          if (hiIndika.Text == "Hi Indika")
-    //        {
-      //          Console.WriteLine("Logged in successfull. Test passed");
-
-        //    }
-          //  else
-            //{
-              //  Console.WriteLine("Login Failed. Test failed");
-
-            //}
-
-
         }
     }
 }
 
     
+
+

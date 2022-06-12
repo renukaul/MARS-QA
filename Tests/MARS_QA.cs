@@ -11,7 +11,7 @@ namespace MARS_QA
     internal class MARS_QA : CommonDriver
     {
         
-        [Test]
+       /* [Test]
         public void AddLanguage()
         {
             //Profile page object initializing and defining
@@ -39,6 +39,6 @@ namespace MARS_QA
             ProfilePageObj.AddCertification(driver);
         }
 
-        
+        */
     }
 }

@@ -24,7 +24,7 @@ namespace MARS_QA.Utilities
 
             //Login page object initializing and defining
             Loginpage LoginPageObj = new Loginpage();
-            LoginPageObj.LoginSteps(driver);
+         //   LoginPageObj.LoginSteps(driver);
         }
 
         [OneTimeTearDown]

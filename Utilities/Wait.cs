@@ -15,7 +15,7 @@ namespace MARS_QA.Utilities
             public static void WaitForclicable(IWebDriver driver, string locator, string locatorValue, int seconds)
             {
                 var wait = new WebDriverWait(driver, new TimeSpan(0, 0, seconds));
-                if (locator == "Xpath")
+                if (locator == "XPath")
                 {
                     wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(locatorValue)));
                 }
